@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Marker</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap family=Inter:wght@100..900&display=swap" rel="stylesheet" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/ffcd891956.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="m-0 p-0">
+ 
+  <div class="container m-auto">
+    <div class="logo d-flex justify-content-center align-items-center ">
+        <i class="fas fa-book-open bg-light pe-4 ps-4 pt-3 pb-3" ></i>
+        <h1 class="ps-4"> BookMarker</h1>
+        <div class="overlay"></div>
+
+    </div>
+    <form>
+        <div class="bookmarker pb-3 mb-4"> <i class="	far fa-bookmark"></i>Bookmark your favorite sites <i class="far fa-bookmark"></i>
+        </div>
+        <div class="mb-3 ">
+             <label for="bookmarkName" class="pb-2 fw-bolder fa-1x"> <i class="fas fa-book"></i> Site Name</label>
+             <input class="form-control p-2" placeholder="Bookmark Name" type="text" name="" id="bookmarkName">
+        </div>
+  
+         <div class="mb-3">
+             <label for="bookmarkURL" class="pb-2 fw-bolder fa-1x mt-4"> <i class="fas fa-link"></i> Site URL</label>
+             <input class="form-control" type="url" placeholder="Website URL" name="" id="bookmarkURL">
+         </div>
+
+
+         <button id="submitBtn" type="submit" class="btn  m-auto pe-4 ps-4 mt-5 btn-danger">Add Book</button>   
+     </form>
+     <table class="table mt-4 text-center bg-light">
+        <thead>
+          <th class="text-capitalize">index</th>
+          <th class="text-capitalize">Website Name</th>
+          <th class="text-capitalize">Visit</th>
+          <th class="text-capitalize">Delete</th>
+        </thead>
+        <tbody id="tableContent"></tbody>
+      </table>
+
+      <div  class="box-info position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none" >
+      <div class="box-conent bg-white p-4 rounded-2 shadow-lg">
+        <header class="box-header w-100 d-flex justify-content-between align-items-center mb-4" >
+          <div class="circles d-flex">
+            <span class="circle1 me-2"></span>
+            <span class="circle2 me-2"></span>
+            <span class="circle3 me-2"></span>
+          </div>
+          <button class="btn border-0" id="closeBtn">
+            <i class="fa-solid fa-xmark close fs-3"></i>
+          </button>
+        </header>
+        <p class="m-0 pb-2">
+          Site Name or Url is not valid, Please follow the rules below :
+        </p>
+        <ol class="rules list-unstyled m-0">
+          <li>
+            <i class="fa-regular fa-circle-right p-2"></i>Site name must
+            contain at least 3 characters
+          </li>
+          <li>
+            <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a
+            valid one
+          </li>
+        </ol>
+      </div>
+    </div>
+
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
